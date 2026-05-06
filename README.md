@@ -24,16 +24,6 @@ With just a few prompts, you can effortlessly sift through cluttered directories
    python sorter.py
    ```
 
-### 📦 Building a Standalone Executable
-*(Note: Pre-built executables are not included in this repository.)*
-If you want to create a standalone `.exe` file so you can run the tool without needing a Python environment, you can build it yourself:
-1. Ensure your dependencies are installed (`pyinstaller` is included in `requirements.txt`).
-2. Run the following command:
-   ```sh
-   python -m PyInstaller --onefile --console --name "Image_CO" --hidden-import PIL --hidden-import pillow_heif sorter.py
-   ```
-3. The newly compiled `Image_CO.exe` will be generated inside a `dist` folder!
-
 ## 🎮 Interactive Prompts Guide
 
 When you run the tool, you will be guided through a series of prompts:
@@ -47,7 +37,6 @@ When you run the tool, you will be guided through a series of prompts:
 File Sorter requires external libraries which are listed in `requirements.txt`. Key dependencies include:
 - `pillow` (for image processing)
 - `pillow-heif` (for HEIC/HEIF conversion)
-- `pyinstaller` (optional, for building the executable)
 
 ## 🤝 Contribution
 Feel free to fork this project, add new filtering rules (like filtering by date or file size), and make it even more powerful!
