@@ -1,2 +1,7 @@
+.venv/
+build/
+dist/
+*.spec
 __pycache__/
-*.pyc
+test_dest/
+test_src/

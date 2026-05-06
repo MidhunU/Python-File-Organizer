@@ -1,32 +1,49 @@
-# 📂 File Sorter & Organizer
+# 📂 File Sorter & Image Converter
 
-Tired of messy folders filled with a million random files? **File Sorter** is a simple, fast Python script that swoops in to rescue your digital workspace. 
+Tired of messy folders filled with a million random files? **File Sorter** is a simple, fast Python tool that swoops in to rescue your digital workspace. 
 
-With just a few prompts, you can effortlessly sift through cluttered directories and copy specific files (based on their extension or matching keywords) into a neat, organized output folder!
+With just a few prompts, you can effortlessly sift through cluttered directories, copy specific files (based on their extension or matching multiple keywords), and optionally **convert Apple HEIC/HEIF photos to JPG or PNG**!
 
 ## ✨ Features
 * **Extension Filtering**: Need all the `.jpg` and `.png` images? Just type them in.
-* **Keyword Matching**: Want to gather every file that has a specific word (like "Vacation") in the name? This script grabs them too!
-* **Safe Operations**: File Sorter copies your files over to the new destination. Your original messy folder stays exactly exactly the way it was, acting as a safe backup.
+* **Multiple Keyword Matching**: Want to gather files containing words like "Vacation" or "Party" in their names? You can search for multiple comma-separated keywords simultaneously.
+* **HEIC/HEIF Conversion**: Seamlessly converts high-efficiency Apple image formats (`.heic`, `.heif`) into standard formats (`.jpg`, `.png`) on the fly.
+* **Continuous Processing**: The script loops automatically, allowing you to run multiple sorting and converting tasks back-to-back without restarting.
+* **Safe Operations**: File Sorter copies your files over to the new destination. Your original messy folder stays exactly the way it was, acting as a safe backup.
 
 ## 🚀 How to Use
 
+### Option 1: Standalone Executable (Windows)
+No Python required! Just use the bundled executable.
+1. Navigate to the `dist` folder.
+2. Run `Image_CO.exe`.
+3. Follow the interactive prompts.
+
+### Option 2: Running the Python Script
 1. Ensure you have Python installed on your computer.
 2. Clone or download this project.
-3. Open a terminal or command prompt in the project directory and run the script:
+3. Install the required dependencies:
+   ```sh
+   pip install pillow pillow-heif
+   ```
+4. Open a terminal or command prompt in the project directory and run:
    ```sh
    python sorter.py
    ```
-4. **Follow the interactive prompts:**
-   - **Source dest**: Where's the mess? (e.g., `C:\...\Downloads`)
-   - **Output dest**: Where do you want the organized files to go? (e.g., `C:\...\Organized`)
-   - **Extensions**: Type a comma-separated list of extensions you want to target. Leave it empty if you only want to sort by keyword (e.g., `.jpg, .png`).
-   - **Keyword Search**: You can either enter a keyword to search for (or leave it empty if you only want to sort by extension).
-      Enter a keyword to search for (or leave empty): `my_fav_picture`
-   
 
-## 🛠 Prerequisites
-- No external dependencies needed! File Sorter uses Python's standard `os` and `shutil` libraries. 
+## 🎮 Interactive Prompts Guide
+
+When you run the tool, you will be guided through a series of prompts:
+- **Source dest**: Where's the mess? (e.g., `C:\Users\Name\Downloads`) — Type `exit` here to quit the program.
+- **Output dest**: Where do you want the organized files to go? (e.g., `C:\Users\Name\Organized`)
+- **Extensions**: Type a comma-separated list of extensions you want to target (e.g., `.jpg, .png`).
+- **Keyword Search**: Enter comma-separated keywords to search for in the file names (e.g., `IMG_, selfie`). Leave empty to skip.
+- **Convert HEIC/HEIF**: If you want to convert Apple image formats, type `.jpg` or `.png`. Leave empty to simply copy them without conversion.
+
+## 🛠 Prerequisites for Developers
+If running from the source code, File Sorter requires the following external Python libraries:
+- `pillow`
+- `pillow-heif`
 
 ## 🤝 Contribution
 Feel free to fork this project, add new filtering rules (like filtering by date or file size), and make it even more powerful!
