@@ -2,7 +2,6 @@ import os
 import shutil
 
 def organize_photos(source_dir, output_dir, extensions=None, keyword=None):
-    # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         print(f"Created folder: {output_dir}")
@@ -36,6 +35,6 @@ TARGET_EXTENSIONS = [
     for ext in raw_input.split(',') 
     if ext.strip()
 ]
-TARGET_KEYWORD = 'Vacation' # Leave as None if you only want to sort by extension
+TARGET_KEYWORD = 'Vacation'
 
 organize_photos(SOURCE, DESTINATION, TARGET_EXTENSIONS, TARGET_KEYWORD)
