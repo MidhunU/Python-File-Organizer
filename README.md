@@ -20,7 +20,7 @@ With just a few prompts, you can effortlessly sift through cluttered directories
 4. **Follow the interactive prompts:**
    - **Source dest**: Where's the mess? (e.g., `C:\...\Downloads`)
    - **Output dest**: Where do you want the organized files to go? (e.g., `C:\...\Organized`)
-   - **Extensions**: Type a comma-separated list of extensions you want to target (e.g., `.jpg, .png`).
+   - **Extensions**: Type a comma-separated list of extensions you want to target. Leave it empty if you only want to sort by keyword (e.g., `.jpg, .png`).
    - **Keyword Search**: You can either enter a keyword to search for (or leave it empty if you only want to sort by extension).
       Enter a keyword to search for (or leave empty): `my_fav_picture`
    
