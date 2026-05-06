@@ -1,4 +1,4 @@
-# 📂 File Sorter & Image Converter
+# 📂 Image Sorter & Converter
 
 Tired of messy folders filled with a million random files? **File Sorter** is a simple, fast Python tool that swoops in to rescue your digital workspace. 
 
