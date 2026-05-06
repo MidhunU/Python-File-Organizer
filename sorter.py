@@ -35,6 +35,7 @@ TARGET_EXTENSIONS = [
     for ext in raw_input.split(',') 
     if ext.strip()
 ]
-TARGET_KEYWORD = 'Vacation'
-
+TARGET_KEYWORD = input("Enter a keyword to search for (or leave empty): ").strip()
+if TARGET_KEYWORD == "":
+    TARGET_KEYWORD = None
 organize_photos(SOURCE, DESTINATION, TARGET_EXTENSIONS, TARGET_KEYWORD)
